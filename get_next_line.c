@@ -6,7 +6,7 @@
 /*   By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:56:43 by rvaz-da-          #+#    #+#             */
-/*   Updated: 2025/10/30 17:33:32 by rvaz-da-         ###   ########.fr       */
+/*   Updated: 2025/10/31 14:59:26 by rvaz-da-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,23 @@ char	*get_next_line(int fd)
 int	main(void)
 {
 	int		fd;
-	int		i;
+//	int		i;
 	char	*line;
 
-	i = 0;
-	fd = open("test2.txt", O_RDONLY);
+//	i = 0;
+	fd = open("a.out", O_RDONLY);
 	line = NULL;
 	if (fd == -1)
 		return (1);
+	line = get_next_line(fd);
+	printf("%s\n", line);
+	/*	
 	while (i < 147)
 	{
 		line = get_next_line(fd);
 		printf("%s", line);
 		free(line);
 		i++;
-	}
+	}*/
 	return (0);
 }
