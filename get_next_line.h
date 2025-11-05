@@ -6,7 +6,7 @@
 /*   By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:59:52 by rvaz-da-          #+#    #+#             */
-/*   Updated: 2025/10/30 15:24:59 by rvaz-da-         ###   ########.fr       */
+/*   Updated: 2025/11/05 17:14:12 by rvaz-da-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@
 # endif
 
 size_t	gnl_strlen(char *str);
+char	*ft_strchr(char *str, int c);
 char	*get_next_line(int fd);
-char	*gnl_strjoin(char *buff, char *line);
+char	*gnl_strjoin(char *line, char *buff);
 char	*clean_buff(char *buff);
 
 #endif

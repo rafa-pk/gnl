@@ -6,11 +6,29 @@
 /*   By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:59:09 by rvaz-da-          #+#    #+#             */
-/*   Updated: 2025/10/30 17:33:12 by rvaz-da-         ###   ########.fr       */
+/*   Updated: 2025/11/05 17:15:41 by rvaz-da-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+char	*ft_strchr(char *str, int c)
+{
+	size_t			i;
+	unsigned char	ch;
+
+	i = 0;
+	ch = (unsigned char) c;
+	while (str[i])
+	{
+		if (str[i] == ch)
+			return ((char *) &str[i]);
+		i++;
+	}
+	if (ch == '\0')
+		return ((char *) &str[i]);
+	return (NULL);
+}
 
 size_t	gnl_strlen(char *str)
 {
@@ -26,7 +44,7 @@ size_t	gnl_strlen(char *str)
 	return (i);
 }
 
-char	*gnl_strjoin(char *buff, char *line)
+char	*gnl_strjoin(char *line, char *buff)
 {
 	size_t	i;
 	size_t	j;
